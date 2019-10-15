@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>Adivina</title>
+</head>
+
+<body>
+    <script>
+        var numS=347;
+        var salir=false;
+        while(salir==false)
+        {
+            var num=window.prompt("Introduce un número","");
+            if(num==numS)
+            {
+                document.write("Has acertado, el número es "+numS);
+                break;
+            }else if(num>numS)
+            {
+                window.alert("El numero es menor");
+            }else
+            {
+                window.alert("El numero es mayor");
+            }
+        }
+    </script>
+</body>
+</html>
