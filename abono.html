@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>Abono transporte</title>
+</head>
+
+<body>
+    <script>
+        var edad=window.prompt("Introduce tu edad","");
+        var emp=window.prompt("Estas empadronado s/n","");
+        if(edad<16)
+        {
+            desc=0.8;
+            if(emp=="s")
+            {
+                desc=desc-0.1;
+            }
+
+        }else if(edad<18)
+        {
+            desc=0.75;
+            if(emp=="s")
+            {
+                desc=desc-0.05;
+            }
+
+        }else if(edad<65){
+            desc=1;
+            if(emp=="s")
+            {
+                desc=desc-0.05;
+            }
+
+        }else{
+            desc=0.5;
+            if(emp=="s")
+            {
+                desc=desc-0.1;
+            }
+
+        }
+        abono=60*desc;
+        document.write("El coste del abono es "+abono+"€");
+        
+    </script>
+
+</body>
+</html>
