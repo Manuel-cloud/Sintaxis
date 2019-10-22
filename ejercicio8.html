@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>Ejercicio8</title>
+</head>
+
+<body>
+    <h1 id="relog"></h1>
+    <script >
+        var hour, minutes,seconds;
+        setInterval(reloj, 1000);
+        function reloj()
+        {
+            var d = new Date();
+            hour=d.getHours();
+            minutes=d.getMinutes();
+            seconds=d.getSeconds();
+            document.getElementById("relog").innerHTML = hour+":"+minutes+":"+seconds;
+        }
+        
+    </script>
+</body>
+</html>
