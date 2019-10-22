@@ -11,4 +11,4 @@ function reloj()
    
 
 }
-document.getElementById("demo").innerHTML = hour+":"+minutes+":"+seconds;
+document.getElementById("relog").innerHTML = hour+":"+minutes+":"+seconds;
