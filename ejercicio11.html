@@ -1,0 +1,82 @@
+</<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="main.css" type="text/css" rel="stylesheet">
+  <title>Ejercicio 11: Fucnionalidades básicas con arrays </title>
+</head>
+
+<body>
+
+  <h1>Primera parte: Mayor, menor y media</h1>
+  Introduce los enteros separados por comas: <br/>
+  <input type="text" id="array" value="" placeholder="Array de enteros"/>
+  <button onclick="document.getElementById ('array').value = addExample();">Ejemplo</button>
+  <br/><br/>
+  <button id="validar1" onclick="mayor_menor_media();">Calcula</button>
+  <p id="resultado1"></p>
+  <br/>
+
+
+  <h1>Segunda parte: Concatenar arrays</h1>
+  Introduce los primeros enteros separados por comas: <br/>
+  <input type="text" id="array1" value="" placeholder="Array de enteros"/>
+  <button onclick="document.getElementById ('array1').value = addExample();">Ejemplo1</button>
+  <br/>
+  Introduce los segundos enteros separados por comas: <br/>
+  <input type="text" id="array2" value="" placeholder="Array de enteros" />
+  <button onclick="document.getElementById ('array2').value = addExample();">Ejemplo2</button>
+  <br/><br/>
+  <button id="validar2" onclick="concatenar();">Concatena</button>
+  <p id="resultado2"></p>
+  <br/>
+
+
+  <h1>Tercera parte: Concatenar arrays de diferente tamaño</h1>
+  Introduce los primeros enteros separados por comas: <br/>
+  <input type="text" id="array3" value="" placeholder="Array de enteros"/>
+  <button onclick="document.getElementById('array3').value = addExample();">Ejemplo1</button>
+  <br/>
+  Introduce los segundos enteros separados por comas: <br/>
+  <input type="text" id="array4" value="" placeholder="Array de enteros" />
+  <button onclick="document.getElementById('array4').value = addExample();">Ejemplo2</button>
+  <br/><br/>
+  <button id="validar3" onclick="concatenar_diferentes();">Concatena</button>
+  <p id="resultado3"></p>
+  <br/>
+
+
+  <h1>Cuarta parte: Añadir elemento</h1>
+  Introduce los primeros enteros separados por comas: <br/>
+  <input type="text" id="array5" value="" placeholder="Array de enteros"/>
+  <button onclick="document.getElementById('array5').value = addExample();">Ejemplo</button>
+  <br/>
+  Valor:
+  <input type="number" id="element" value="" placeholder="Número a añadir"/>
+  <select id="numInteger1">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option selected="" value="5">5</option>
+    <option value="6">6</option>
+  </select>
+  <br/><br/>
+  <button id="validar4" onclick="addElement();">Validar</button>
+  <p id="resultado4"></p>
+  <br/>
+
+
+  <h1>Qinta parte: Ordenar</h1>
+  Introduce los enteros separados por comas: <br/>
+  <input type="text" id="array6" value="" placeholder="Array de enteros"/>
+  <button onclick="document.getElementById('array6').value = addExample();">Ejemplo</button>
+  <br/><br/>
+  <button id="validar5" onclick="sortArray();">Calcula</button>
+  <p id="resultado5"></p>
+  <br/>
+
+  <script src="JS/ejercicio11.js"></script>
+</body>
+</html>
