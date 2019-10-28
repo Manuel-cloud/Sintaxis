@@ -1,7 +1,9 @@
  "use strict";
 
  function validate () {
- 	var words = document.getElementById("words").value.split(","); //Obtengo en un array todas las palabras.
+	 var words = document.getElementById("words").value.split(" "); //Obtengo en un array todas las palabras.
+	 //Va a tener un error porque luego tiene un espacio antes de la palabra excepto la primera y lo ordena mal 
+	 //o pones que se separen por espacios o ", "
  	var resultado = document.getElementById ("resultado"); //Elemento donde se muestra el resultado
 
  	resultado.innerHTML = "Nº de palabras: " + words.length;
