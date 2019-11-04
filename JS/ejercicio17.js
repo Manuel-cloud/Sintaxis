@@ -15,13 +15,15 @@
  	var num = parseInt (elem.value);
  	var resultado = document.getElementById ("resultado");
     
+
  	if (isNaN(num) || (num>10) || (num<=0)) { //Si el valor no es un entero se genera un error.
  		resultado.style.color = "red";
  		resultado.innerHTML = "Debes introducir un entero entre 0 y 10";
  	} else {
          //Sacamos la columna de las sumas
- 		for(let i=0;i<num;i++){
-            for(let j=0;j<num;j++){
+ 		for(let i=0;i<(num-1);i++){
+             ARRAY[i]=new Array(num);
+            for(let j=0;j<(num-1);j++){
                 ARRAY[i][j]=cont;
                 SUMAV[i]=SUMAV[i]+cont;
                 cont++;
@@ -38,7 +40,7 @@
 
         //Creamos la tabla
 //resultado.innerHTML = "<table>";
-        for(let i=0;i<ARRAY.length;i++){
+        for(let i=0;i<ARRAY.length();i++){
           // resultado.innerHTML= "<tr>";
             for(let j=0;j<ARRAY.length;j++){
                 resultado.innerHTML= ARRAY[i][j];
