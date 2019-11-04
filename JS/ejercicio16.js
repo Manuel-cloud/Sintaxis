@@ -40,7 +40,7 @@ function validar_telefonoInt(){
 
 function validar_fecha(){
     var fecha = document.getElementById ("fecha");
-    var reg = new RegExp("(\d{1,2})\/(\d{1,2})\/(\d{4})\ (\d{0,23}):(\d{0,59})$","gm");
+    var reg = new RegExp("^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[012])\/(\d{4})\s/([01]\d|2[0-3])\:/([0-5]\d)$","gm");
     if(reg.test(fecha.value)===true){
         resultado4.innerHTML="Correcto";
         resultado4.style.color = "green";
@@ -53,7 +53,7 @@ function validar_fecha(){
 
 function validar_cp(){
     var cp = document.getElementById ("cp");
-    var reg = new RegExp("\d{5}$","gim");
+    var reg = new RegExp("^\d{5}$","gim");
     if(reg.test(cp.value)===true){
         resultado5.innerHTML="Correcto";
         resultado5.style.color = "green";
@@ -66,7 +66,7 @@ function validar_cp(){
 
 function validar_email(){
     var email = document.getElementById ("email");
-    var reg = new RegExp(".*@.*\.(com|es)$","gim");
+    var reg = new RegExp("\w{6,}+\@\w{6,}\.[a-zA-Z]{2,3}$","gim");//minimo 6 letras hasta inginita
     if(reg.test(email.value)===true){
         resultado6.innerHTML="Correcto";
         resultado6.style.color = "green";
@@ -79,7 +79,7 @@ function validar_email(){
 
 function validar_importe(){
     var importe = document.getElementById ("importe");
-    var reg = new RegExp("\-*\d\.*","gim");
+    var reg = new RegExp("^(\-?)\d+([.,]\d+)?$","gim");
     if(reg.test(importe.value)===true){
         resultado7.innerHTML="Correcto";
         resultado7.style.color = "green";
@@ -92,7 +92,7 @@ function validar_importe(){
 
 function validar_banco(){
     var banco = document.getElementById ("banco");
-    var reg = new RegExp("\d{20}$","gim");
+    var reg = new RegExp("^\d{4}\s\d{4}\s\d{2}\s\d{10}$","gim");
     if(reg.test(banco.value)===true){
         resultado8.innerHTML="Correcto";
         resultado8.style.color = "green";
@@ -105,7 +105,7 @@ function validar_banco(){
 
 function validar_pweb(){
     var pweb = document.getElementById ("pweb");
-    var reg = new RegExp("www\..*\.(es|com|net|org)$","gim");
+    var reg = new RegExp("^www\.\w+\.[a-zA-Z]{2,3}$","gim");
     if(reg.test(pweb.value)===true){
         resultado9.innerHTML="Correcto";
         resultado9.style.color = "green";
@@ -118,7 +118,7 @@ function validar_pweb(){
 
 function validar_web(){
     var web = document.getElementById ("web");
-    var reg = new RegExp("(http|https):\/\/www\..*\.(es|com|net|org):\d*","gim");
+    var reg = new RegExp("^(http|https)\:\/\/www\..*\.(es|com|net|org)\:\d{1,5}$","gim");
     if(reg.test(web.value)===true){
         resultado10.innerHTML="Correcto";
         resultado10.style.color = "green";
@@ -131,7 +131,7 @@ function validar_web(){
 
 function validar_webCompl(){
     var webcom = document.getElementById ("webcom");
-    var reg = new RegExp("(http|https):\/\/www\..*\.(es|com|net|org):\d*.*","gim");
+    var reg = new RegExp("^http[s]?\:\/\/www\..*\.(es|com|net|org)\:\d{1,5}\?(\w+=\w+)(\&\w+=\w+)*$","gim");
     if(reg.test(webcom.value)===true){
         resultado11.innerHTML="Correcto";
         resultado11.style.color = "green";
