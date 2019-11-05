@@ -32,18 +32,50 @@ function primo()
 }
 primo();
 */
-var cadena=window.prompt("Escribe una cadena","");
-function info()
-{
-    if(cadena==cadena.toLowerCase())
-    {
-        document.write("La cadena esta compuesta solo por minusculas");
-    }else if(candena==cadena.toUpperCase()){
-        document.write("La cadena esta compuesta solo por mayusculas");
-    }else{
-        document.write("La cadena esta compuesta por mayusculas y minusculas");
+// var cadena=window.prompt("Escribe una cadena","");
+// function info()
+// {
+//     if(cadena==cadena.toLowerCase())
+//     {
+//         document.write("La cadena esta compuesta solo por minusculas");
+//     }else if(candena==cadena.toUpperCase()){
+//         document.write("La cadena esta compuesta solo por mayusculas");
+//     }else{
+//         document.write("La cadena esta compuesta por mayusculas y minusculas");
         
-    }
+//     }
 
+// }
+// info();
+
+//Factorial iterativo
+var num=window.prompt("Escribe un numero","");
+// var resultado = document.getElementById ("resultado");
+// function factorial(num){
+//     var fact=1;
+//     for(let i=num; i>0; i--){
+//         fact=fact*i;
+//     }
+//     return fact;
+// }
+// document.write(factorial(num));
+
+//Factorial recursivo
+
+// function factorialRec(num){
+//     if(num<=1) return 1;
+//     return num *factorialRec(num-1);
+
+// }
+// document.write(factorialRec(num));
+
+//Fibonacci recursiva
+function fiboRec(elem){
+
+    /*
+    if(elem<2) return elem;*/ 
+    if(elem==0) return 0;
+    if(elem==1) return 1;
+    return fiboRec(elem-1)+fiboRec(elem-2);
 }
-info();
+document.write(fiboRec(num));
