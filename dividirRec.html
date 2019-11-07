@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>Funciones</title>
+</head>
+
+<body>
+  <h1>Dividir Recursivamente</h1>
+  Dividendo: <br/>
+  <input type="text" id="divd" value=""/><br>
+  Divisor: <br/>
+  <input type="text" id="divs" value=""/><br>
+  <button id="addButton" onclick="document.getElementById('resultado').innerHTML=divRec(document.getElementById('divd').value, document.getElementById('divs').value);">Dividir</button>
+
+  <br/><br/>
+
+  <p id="resultado"></p>
+
+  <h1>Voltear</h1>
+  Numero: <br/>
+  <input type="text" id="num" value=""/><br>
+  <button id="addButton" onclick="document.getElementById('resultado2').innerHTML=voltear(document.getElementById('num').value);">Voltear</button>
+
+  <br/><br/>
+
+  <p id="resultado2"></p>
+
+  <h1>Sumar</h1>
+  Numero: <br/>
+  <input type="text" id="nums" value=""/><br>
+  <button id="addButton" onclick="document.getElementById('resultado3').innerHTML=sumar(document.getElementById('nums').value);">Sumar</button>
+
+  <br/><br/>
+
+  <p id="resultado3"></p>
+
+  <h1>Sumar2</h1>
+  Numeros: <br/>
+  <input type="text" id="nums" value=""/><br>
+  <button id="addButton" onclick="document.getElementById('resultado4').innerHTML=sumarStr(document.getElementById('nums').value.split('/^\,\s*/'));">Sumar</button>
+
+  <br/><br/>
+
+  <p id="resultado4"></p>
+
+  <script src="JS/Recursivos.js"></script>
+
+</body>
+</html>
