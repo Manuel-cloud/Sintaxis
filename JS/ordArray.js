@@ -38,25 +38,27 @@ var person=[ { id: 133, firstName: "Juan Carlos", lastName: "Rolón", email: "He
 // document.getElementById("Buttom3").innerHTML=init3();
 // document.getElementById("Buttom3").onclick=Mostrar;
 function init3(){
-    person.sort(function (a, b) {
-        var x = a.lastName.toLowerCase();
-        var y = b.lastName.toLowerCase();
-        if (x != y) { //Comparamos por apellido si no son iguales.
-            if (x < y) { return 1; } 
-            else { return -1; };
-        } else { //Si son iguales comparamos por nombre.
-            x = a.firstName.toLowerCase();
-            y = b.firstName.toLowerCase();
-            if (x < y) {return 1; }
-            else {return -1; };
-        }
-    })
-    
+    person.sort(ordenarArray);
+
     resultado.innerHTML="";
     person.reverse();
     for(let p of person)
     {
         resultado.innerHTML=resultado.innerHTML+p.id+" "+p.firstName+" "+p.lastName+" <a href='mailto:"+p.email+"'>"+p.email+"</a><br>";
+    }
+}
+
+function ordenarArray(a, b) {
+    var x = a.lastName.toLowerCase();
+    var y = b.lastName.toLowerCase();
+    if (x != y) { //Comparamos por apellido si no son iguales.
+        if (x < y) { return -1; } 
+        else { return 1; };
+    } else { //Si son iguales comparamos por nombre.
+        x = a.firstName.toLowerCase();
+        y = b.firstName.toLowerCase();
+        if (x < y) {return -1; }
+        else {return 1; };
     }
 }
 
@@ -70,7 +72,6 @@ function init4(){
         }
     })
     resultado.innerHTML="";
-    person.reverse();
     for(let p of person)
     {
         resultado.innerHTML=resultado.innerHTML+p.id+" "+p.firstName+" "+p.lastName+" <a href='mailto:"+p.email+"'>"+p.email+"</a><br>";
