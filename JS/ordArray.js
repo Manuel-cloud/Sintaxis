@@ -41,7 +41,6 @@ function init3(){
     person.sort(ordenarArray);
 
     resultado.innerHTML="";
-    person.reverse();
     for(let p of person)
     {
         resultado.innerHTML=resultado.innerHTML+p.id+" "+p.firstName+" "+p.lastName+" <a href='mailto:"+p.email+"'>"+p.email+"</a><br>";
