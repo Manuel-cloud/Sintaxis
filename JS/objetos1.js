@@ -45,12 +45,12 @@ function add(){
 
 }
 
-// function show(){
-//     resultado.innerHTML="";
-//     for(x of carro.getLista()){
-//         resultado.innerHTML=resultado.innerHTML+"Producto: "+x.nombre+"; Precio: "+x.precio+"<br>";
-//     }
-// }
+function show(){
+    resultado.innerHTML="";
+    for(x of carro.getLista()){
+        resultado.innerHTML=resultado.innerHTML+"Producto: "+x.nombre+"; Precio: "+x.precio+"<br>";
+    }
+}
 
 // function delet(){
 //     resultado.innerHTML="";
