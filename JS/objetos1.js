@@ -1,37 +1,37 @@
 //Objeto producto
-function Producto(nombre, precio){
-    this.nombre=nombre;
-    this.precio=precio;
-}
-
-
-function Carrito(){
-    this.lista=[];
-}
-
-Carrito.prototype.añadir=function(producto){
-    this.lista.push(producto);
-}
-
-Carrito.prototype.contar=function(){
-    return this.lista.length;
-}
-
-Carrito.prototype.calcPrecio=function(){
-    var total=0;
-    for(x of this.lista)
-    {
-        total+=parseInt(x.precio);
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
     }
-    return total;
 }
 
-Carrito.prototype.getLista=function(){
-    return this.lista;
-}
 
-Carrito.prototype.deletePro=function(){
-
+class Carrito {
+    constructor() {
+        this.lista = [];
+    }
+    añadir(producto) {
+        this.lista.push(producto);
+    }
+    contar() {
+        return this.lista.length;
+    }
+    calcPrecio() {
+        var total = 0;
+        for (let x of this.lista) {
+            total += parseInt(x.precio);
+        }
+        return total;
+    }
+    getLista() {
+        return this.lista;
+    }
+    deletePro() {
+    }
+    borrar(pos){
+        this.lista.splice(pos, 1);
+    }
 }
 
 var carro=new Carrito();
@@ -52,14 +52,12 @@ function show(){
     }
 }
 
-// function delet(){
-//     resultado.innerHTML="";
-//     resultado.innerHTML=resultado.innerHTML+"<select>";
-//     for(x of carro.getLista()){
-//         resultado.innerHTML=resultado.innerHTML+"<option value="+x.nombre+">"+x.nombre+"</option>";
-//     }
-//     resultado.innerHTML=resultado.innerHTML+"</select>";
-// }
+function delet(){
+    var objeto=document.getElementById("objeto");
+
+        carro.borrar(objeto);
+        show();
+}
 /*
 function carrito(){
     this.articulos=0;
