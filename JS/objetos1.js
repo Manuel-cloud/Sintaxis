@@ -27,8 +27,6 @@ class Carrito {
     getLista() {
         return this.lista;
     }
-    deletePro() {
-    }
     borrar(pos){
         this.lista.splice(pos, 1);
     }
@@ -54,9 +52,9 @@ function show(){
 
 function delet(){
     var objeto=document.getElementById("objeto");
-
-        carro.borrar(objeto);
-        show();
+    
+    carro.borrar(objeto);
+    show();
 }
 /*
 function carrito(){
