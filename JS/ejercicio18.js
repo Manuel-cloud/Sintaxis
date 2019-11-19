@@ -8,6 +8,7 @@ Persona.prototype.obtDetalles=function(){
 }
 
 function Estudiante(){
+    Persona.call(this);
     this.grupo="";
     this.curso="";
 }
@@ -18,6 +19,7 @@ Estudiante.prototype.registrar=function(curso, grupo){
 }
 
 function Profesor(){
+    Persona.call(this);
     this.asignatura="";
     this.nivel="";
 }
