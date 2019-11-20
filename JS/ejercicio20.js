@@ -51,9 +51,13 @@ Person.prototype.setSexo=function(sexo){
     this.sexo=sexo;
 }
 /*PRUEBAS*/
-var p1=new Person("Victor","Ramirez","Olmos","09987567D","03/21/1987", "masculino");
-console.log(p1.fullName());
-console.log(p1.toString());
-console.log(p1.getDNI());
-p1.setNombre("Jose");
-console.log(p1.getNombre()); 
+function init(){
+    var resultado=document.getElementById("resultado");
+    resultado.innerHTML="";
+    var p1=new Person("Victor","Ramirez","Olmos","09987567D","03/21/1987", "masculino");
+    resultado.innerHTML=resultado.innerHTML+p1.fullName()+"<br>";
+    resultado.innerHTML=resultado.innerHTML+p1.toString()+"<br>";
+    resultado.innerHTML=resultado.innerHTML+p1.getDNI()+"<br>";
+    p1.setNombre("Jose");
+    resultado.innerHTML=resultado.innerHTML+p1.getNombre(); 
+}
