@@ -44,8 +44,12 @@ Direccion.prototype.setCP=function(cp){
 }
 
 /*PRUEBAS*/
-var c1=new Direccion("Altagracia","Calle",2,"3e",13008);
-console.log(c1.toString());
-console.log(c1.getDireccion());
-c1.setCP(13001);
-console.log(c1.getCP()); 
+function init(){
+    var resultado=document.getElementById("resultado");
+    resultado.innerHTML="";
+    var c1=new Direccion("Altagracia","Calle",2,"3e",13008);
+    resultado.innerHTML=resultado.innerHTML+c1.toString()+"<br>";
+    resultado.innerHTML=resultado.innerHTML+c1.getDireccion()+"<br>";
+    c1.setCP(13001);
+    resultado.innerHTML=resultado.innerHTML+c1.getCP(); 
+}
