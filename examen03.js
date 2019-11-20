@@ -2,6 +2,7 @@
 //Validar y resgistrar datos
 villano=[];
 function register(){
+    resultado.innerHTML="";
     var nombre = document.getElementById ("nombre");
     var edad = document.getElementById ("edad");
     var maldad = document.getElementById ("maldad");
@@ -31,13 +32,13 @@ function register(){
         //Comprobar que se añade correctamente el registro
         console.log("Nombre "+villano[0][0]+" Edad "+villano[0][1]+" Maldad "+villano[0][2]);
     }
-    resultado.style.color = "white";
 }
 
 //Funcion resumen del registro
 function inform()
 {
     resultado.innerHTML="";
+    resultado.style.color = "white";
     //Numero de villanos
     var numV=villano.length;
     //Media de edades
@@ -74,6 +75,7 @@ function inform()
 function jubilar()
 {
     resultado.innerHTML="";
+    resultado.style.color = "white";
     var anio = document.getElementById ("anio");
     var regAnio=/^\d{4}$/;
     if(regAnio.test(anio.value)===true){
@@ -82,9 +84,9 @@ function jubilar()
         var proxAnio=new Date(anio.value, 0, 1, 0, 0, 0);
         var dif=proxAnio.getTime()-d.getTime();//Diferencia en milisegundos de los años
         var cont=dif/(1000*60*60*24*365);//Tiempo de diferencia entre milisegundos de un año
+        resultado.innerHTML=resultado.innerHTML+"Lista de jubilados: <br>";
         for(let i=0;i<villano.length;i++)
         {
-            resultado.innerHTML=resultado.innerHTML+"Lista de jubilados: <br>";
             var proxEdad=parseInt(villano[i][1])+Math.ceil(cont);
             console.log(proxEdad);
             if(proxEdad>=70){
@@ -100,6 +102,7 @@ function jubilar()
 villanosAux=[];
 function atrapar(){
     resultado.innerHTML="";
+    resultado.style.color = "white";
     var fuerza=78;
     resultado.innerHTML=resultado.innerHTML+"Nueva lista de villanos: <br>";
     for(let i=0;i<villano.length;i++)
@@ -131,6 +134,7 @@ function ordenar(){
       }
     }
     resultado.innerHTML="";
+    resultado.style.color = "white";
     resultado.innerHTML=resultado.innerHTML+"Mas buscados: <br>";
 
     for(let i=0;i<villano.length;i++)
@@ -147,6 +151,7 @@ function ordenar(){
     var name=window.prompt("Nombre del villano","");
     bajas.push(name);
     resultado.innerHTML="";
+    resultado.style.color = "white";
     resultado.innerHTML=resultado.innerHTML+"Peticiones de baja: <br>";
     for(let i=0;i<bajas.length;i++){
         resultado.innerHTML=resultado.innerHTML+bajas[i]+" ";
@@ -156,6 +161,7 @@ function ordenar(){
   function atenderBaja(){
     bajas.shift();
     resultado.innerHTML="";
+    resultado.style.color = "white";
     resultado.innerHTML=resultado.innerHTML+"Peticiones de baja: <br>";
     for(let i=0;i<bajas.length;i++){
         resultado.innerHTML=resultado.innerHTML+bajas[i]+" ";
