@@ -31,6 +31,7 @@ function register(){
         //Comprobar que se añade correctamente el registro
         console.log("Nombre "+villano[0][0]+" Edad "+villano[0][1]+" Maldad "+villano[0][2]);
     }
+    resultado.style.color = "white";
 }
 
 //Funcion resumen del registro

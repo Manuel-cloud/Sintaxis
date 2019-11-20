@@ -4,7 +4,7 @@ function Persona(nombre, edad, genero){
     this.genero=""||genero;
 }
 Persona.prototype.obtDetalles=function(){
-    console.log("Nombre: "+this.nombre+" Edad: "+this.edad+" Genero: "+this.genero);
+    return "Nombre: "+this.nombre+" Edad: "+this.edad+" Genero: "+this.genero;
 }
 
 function Estudiante(){
@@ -29,11 +29,15 @@ Profesor.prototype.asignar=function(asignatura, nivel){
     this.nivel=nivel;
 }
 
-var person=new Persona("Luis", 13, "Neutro");
-person.obtDetalles();
-var estud= new Estudiante();
-estud.registrar("3eso","c");
-console.log("Nombre: "+estud.nombre+" Curso: "+estud.curso+" Grupo: "+estud.grupo);
-var profe=new Profesor();
-profe.asignar("Lengua","Bajo");
-console.log("Asignatura: "+profe.asignatura+" Nivel: "+profe.nivel);
+function init(){
+    var resultado=document.getElementById("resultado");
+    resultado.innerHTML="";
+    var person=new Persona("Luis", 13, "Neutro");
+    resultado.innerHTML=resultado.innerHTML+person.obtDetalles()+"<br>";
+    var estud= new Estudiante();
+    estud.registrar("3eso","c");
+    resultado.innerHTML=resultado.innerHTML+"Nombre: "+estud.nombre+" Curso: "+estud.curso+" Grupo: "+estud.grupo+"<br>";
+    var profe=new Profesor();
+    profe.asignar("Lengua","Bajo");
+    resultado.innerHTML=resultado.innerHTML+"Asignatura: "+profe.asignatura+" Nivel: "+profe.nivel;
+}
