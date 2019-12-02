@@ -35,7 +35,7 @@
 
  function popNumber () {
     try{
-        if(ARRAY.length===0){
+        if(ARRAY.length==0){
             throw "No existen elementos para eliminar";
         }
         else{
