@@ -13,20 +13,20 @@ Object.defineProperty(this, 'sonido', { value: 'ladrido', configurable:true, wri
 Object.defineProperty(this, 'num_patas', { value: 4, configurable:true, writable:true });
 Object.defineProperty(this, 'mover', { get: function(){return "Se mueve en circulos"}} )
 };
-
+Mamifero.prototype= new Animal();
 //Objeto ave
 function Ave(){
     Animal.call(this);
-Object.defineProperty(Ave, 'tipo', { value: 'de presa', configurable:true, writable:true });
-Object.defineProperty(Ave, 'volador', { value: 'si', configurable:true, writable:true });
+Object.defineProperty(this, 'tipo', { value: 'de presa', configurable:true, writable:true });
+Object.defineProperty(this, 'volador', { value: 'si', configurable:true, writable:true });
 Object.defineProperty(this, 'volar', { get: function(){return "Vuelo un rato"}} )
 };
 
 //Objeto perro
 function Perro(){
     Mamifero.call(this);
-Object.defineProperty(Perro, 'raza', { value: 'Labrador', configurable:true, writable:true });
-Object.defineProperty(Perro, 'peligroso', { value: 'no', configurable:true, writable:true });
+Object.defineProperty(this, 'raza', { value: 'Labrador', configurable:true, writable:true });
+Object.defineProperty(this, 'peligroso', { value: 'no', configurable:true, writable:true });
 Object.defineProperty(this, 'ladrar', { get: function(){return "Guau"}} )
 };
 
@@ -37,3 +37,10 @@ console.log(perro1.ladrar);
 console.log(ave1.volar);
 console.log(perro1.crecer);
 
+// function Animal(){
+//     Object.defineProperty(this, 'peso', { 
+//         writable: true,
+//         get: function(){return this.peso},
+//         set: function(x){this.peso=x}
+//      });
+//     }
